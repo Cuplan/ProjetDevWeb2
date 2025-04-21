@@ -10,10 +10,11 @@ import NavBar from './Vues/NavBar';
 function App() {
   return (
     <>
-      <NavBar />
+      <NavBar/>
       <Routes>
         <Route path="/" element={<HomePage />} />
         <Route path="/ninjas" element={ <NinjasPage/> } />
+        <Route path="/ninja/:id" element={<NinjaDetail />} />
         <Route path="/team" element={ <TeamPage/> } />
       </Routes>
     </>
