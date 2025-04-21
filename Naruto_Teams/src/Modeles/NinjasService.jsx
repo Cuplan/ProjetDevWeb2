@@ -5,7 +5,7 @@ export default class NinjasService {
     }
 
 
-    async getNinjasAsync(endpoint = 'characters') {
+    async getNinjasAsync(endpoint = 'characters?limit=500&page=1') {
         const response = await fetch(this.apiUrl + endpoint);
         if (!response.ok) {
           throw new Error(`Erreur ${response.status} : ${response.statusText}`);
@@ -15,13 +15,10 @@ export default class NinjasService {
       }
       
 
-    async getNinjasDetails(id){
-        const reponse = await fetch(id);
-        if( !reponse.ok ) {
-            throw new Error(`Erreur ${reponse.status} : ${reponse.statusText}`);
-        }
-        const pageNinja = await reponse.json();
-        return pageNinja;
-    }
+      async getNinjaById(id) {
+        const res = await fetch(`${this.apiUrl}/characters/${id}`);
+        if (!res.ok) throw new Error(`Erreur ${res.status} : ${res.statusText}`);
+        return res.json(); // retourne l'objet ninja
+      }
 
 }

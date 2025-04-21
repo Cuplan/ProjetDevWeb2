@@ -12,19 +12,10 @@ export function NinjasProvider({ children }) {
   const [ninjas, setNinjas] = useState([]);
 
   useEffect(() => {
-    const service = new NinjasService();
-    service.getNinjasAsync()
-      .then(data => {
-        console.log("API renvoie :", data);
-        // Choisit soit data (si c'est un Array), soit data.characters
-        const list = Array.isArray(data) ? data : data.characters;
-        if (!Array.isArray(list)) {
-          console.error("Forme inattendue des données ninjas :", list);
-          return;
-        }
-        setNinjas(list);
-      })
-      .catch(err => console.error("API ninjas error:", err));
+    const modele = new NinjasService();
+    modele.getNinjasAsync()
+      .then(lesNinjas => { setNinjas(lesNinjas) })
+      .catch(err => console.error(err));
   }, []);
 
   return (

@@ -20,7 +20,7 @@ export default function NinjasPage() {
               </div>
               <img
                 className="card-img-top rounded-0"
-                src={ninja.images}
+                src={ninja.images[0]}
                 alt={ninja.name}
               />
 
