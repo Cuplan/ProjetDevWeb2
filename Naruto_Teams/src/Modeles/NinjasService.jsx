@@ -5,7 +5,7 @@ export default class NinjasService {
     }
 
 
-    async getNinjasAsync(endpoint = 'characters?limit=500&page=1') {
+    async getNinjasAsync(endpoint = 'characters?limit=1350&page=1') {
         const response = await fetch(this.apiUrl + endpoint);
         if (!response.ok) {
           throw new Error(`Erreur ${response.status} : ${response.statusText}`);
