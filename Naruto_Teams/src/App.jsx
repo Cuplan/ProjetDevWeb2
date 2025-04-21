@@ -14,7 +14,6 @@ function App() {
       <Routes>
         <Route path="/" element={<HomePage />} />
         <Route path="/ninjas" element={ <NinjasPage/> } />
-        <Route path="/ninja/:id" element={<NinjaDetail />} />
         <Route path="/team" element={ <TeamPage/> } />
       </Routes>
     </>

@@ -5,17 +5,18 @@ export default class NinjasService {
     }
 
 
-    async getNinjasAsync(endpoint='characters') { // doit avoir le mot-clé async
-        const reponse = await fetch(this.apiUrl + endpoint);
-        if( !reponse.ok ) {
-            throw new Error(`Erreur ${reponse.status} : ${reponse.statusText}`);
+    async getNinjasAsync(endpoint = 'characters') {
+        const response = await fetch(this.apiUrl + endpoint);
+        if (!response.ok) {
+          throw new Error(`Erreur ${response.status} : ${response.statusText}`);
         }
-        const tabPays = await reponse.json();
-        return tabPays;
-    }
+        const data = await response.json();
+        return data.characters;  //  on renvoie le tableau lui‑même
+      }
+      
 
-    async getNinjasDetails(url){
-        const reponse = await fetch(url);
+    async getNinjasDetails(id){
+        const reponse = await fetch(id);
         if( !reponse.ok ) {
             throw new Error(`Erreur ${reponse.status} : ${reponse.statusText}`);
         }

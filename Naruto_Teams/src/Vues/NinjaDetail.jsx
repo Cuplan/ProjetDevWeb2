@@ -8,15 +8,7 @@ export default function NinjaDetail() {
   const ninjas = useNinjas();
   const ninja = ninjas.find((n) => n.id === parseInt(id, 10));
 
-  if (!ninja) {
-    return (
-      <div className="container">
-        <p>Chargement… ou ninja non trouvé.</p>
-        <Link to="/list" className="btn btn-secondary">Retour à la liste</Link>
-      </div>
-    );
-  }
-
+  
   return (
     <div className="container my-4">
       <Link to="/list" className="btn btn-secondary mb-3">
