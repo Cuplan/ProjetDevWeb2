@@ -22,7 +22,7 @@ export function NinjaDetailProvider({ children }) {
     }
   };
 
-  useEffect(() => {fetchNinja();}, [id]);
+  useEffect(() => { fetchNinja(); }, [id]);
 
   return (
     <NinjaDetailContext.Provider value={{ ninja, refetchNinja: fetchNinja }}>

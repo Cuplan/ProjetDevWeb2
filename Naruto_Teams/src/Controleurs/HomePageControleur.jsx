@@ -3,7 +3,7 @@ import { HomePageService } from '../Modeles/HomePageService';
 
 const HomePageContext = createContext();
 
-export function HomePageProvider({ children }) { 
+export function HomePageProvider({ children }) {
   const [formData, setFormData] = useState({
     nom: '',
     email: '',
@@ -37,7 +37,7 @@ export function HomePageProvider({ children }) {
     if (Object.keys(validationErrors).length > 0) {
       setErrors(validationErrors);
     } else {
-      console.log('✅ Formulaire valide :', contact);
+      console.log('Formulaire valide :', contact);
       alert('Formulaire envoyé avec succès !');
       resetForm();
     }
@@ -51,8 +51,7 @@ export function HomePageProvider({ children }) {
         handleSubmit,
         resetForm,
         errors,
-      }}
-    >
+      }}>
       {children}
     </HomePageContext.Provider>
   );

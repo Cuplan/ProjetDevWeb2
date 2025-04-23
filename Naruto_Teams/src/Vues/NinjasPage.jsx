@@ -21,7 +21,6 @@ export default function NinjasPage() {
               className="card-img-top"
               src={ninja.images[0]}
               alt={ninja.name}/>
-
             <div className="card-body">
               <div className="d-flex justify-content-between">
                 <button

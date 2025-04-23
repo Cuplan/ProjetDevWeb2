@@ -1,6 +1,7 @@
 /* Navbar! */
 .navbar-naruto {
-  background-color: #f57c00 !important; /* orange naruto */
+  background-color: #f57c00 !important;
+  /* orange naruto */
 }
 
 .navbar-naruto .navbar-brand,
@@ -112,12 +113,15 @@ body {
   /*NEW CSS DROP NEW CSS DROP! */
   transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
+
 .ninja-card:hover {
   /*Monte de -5px dans l'axe y*/
   transform: translateY(-5px);
 }
+
 .ninja-card .card-header {
-  background-color: #ffc107; /* Orange vif façon bandeau ninja */
+  background-color: #ffc107;
+  /* Orange vif façon bandeau ninja */
   color: #212121;
   font-weight: bold;
   text-align: center;
