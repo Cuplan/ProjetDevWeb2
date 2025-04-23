@@ -16,9 +16,9 @@ export default class NinjasService {
       
 
       async getNinjaById(id) {
-        const res = await fetch(`${this.apiUrl}/characters/${id}`);
+        const res = await fetch(`${this.apiUrl}characters/${id}`);
         if (!res.ok) throw new Error(`Erreur ${res.status} : ${res.statusText}`);
-        return res.json(); // retourne l'objet ninja
+        return res.json(); 
       }
 
 }

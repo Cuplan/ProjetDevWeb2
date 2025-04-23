@@ -1,0 +1,204 @@
+/* Navbar! */
+.navbar-naruto {
+  background-color: #f57c00 !important; /* orange naruto */
+}
+
+.navbar-naruto .navbar-brand,
+.navbar-naruto .nav-link {
+  color: white !important;
+  font-weight: bold;
+  /*à ajouter un font trouvé sur internet*/
+  font-family: "Arial Black", sans-serif;
+  /*Ajoute du contraste*/
+  text-shadow: 1px 1px 2px #000;
+}
+
+.navbar-naruto .nav-link:hover {
+  color: #212121 !important;
+  background-color: rgba(255, 255, 255, 0.2);
+  border-radius: 0.25rem;
+  /*J'ADORE ! ça rend le hover super smooth*/
+  transition: 0.3s;
+}
+
+/*Home Page */
+body {
+  background: black;
+  font-family: "Arial Black", sans-serif;
+  color: #212121;
+}
+
+.headerHP {
+  background-color: #2c2c2c;
+  color: #fff;
+  text-shadow: 2px 2px 4px #000;
+  border-radius: 12px;
+  padding: 2rem;
+  margin-bottom: 2rem;
+  transition: background-color 0.3s ease;
+}
+
+.headerHP:hover {
+  background-color: #444;
+}
+
+.formulaire-naruto {
+  background-color: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(8px);
+  border: 2px solid #fff;
+  border-radius: 1rem;
+  padding: 2rem;
+  color: #fff;
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.3);
+  transition: all 0.3s ease;
+}
+
+.form-label {
+  font-weight: bold;
+  color: #212121;
+}
+
+.form-control,
+.form-select {
+  background-color: #fff3e0;
+  border: 1px solid #f57c00;
+  color: #212121;
+  transition: border-color 0.3s ease;
+}
+
+.form-control:focus,
+.form-select:focus {
+  border-color: #c62828;
+  box-shadow: 0 0 0 0.2rem rgba(245, 124, 0, 0.3);
+}
+
+.btn-primary {
+  background-color: #f57c00;
+  border: none;
+  color: #fff;
+  font-weight: bold;
+  transition: background-color 0.3s ease;
+}
+
+.btn-primary:hover {
+  background-color: #c62828;
+}
+
+.btn-secondary {
+  background-color: #c62828;
+  border: none;
+  color: #fff;
+  font-weight: bold;
+  transition: background-color 0.3s ease;
+}
+
+.btn-secondary:hover {
+  background-color: #f57c00;
+}
+
+.text-danger {
+  color: #c62828;
+  font-weight: 500;
+  margin-top: 0.25rem;
+}
+
+/* Liste des ninjas! */
+.ninja-card {
+  background-color: #1c1c1c;
+  color: #fff;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+  /*NEW CSS DROP NEW CSS DROP! */
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+.ninja-card:hover {
+  /*Monte de -5px dans l'axe y*/
+  transform: translateY(-5px);
+}
+.ninja-card .card-header {
+  background-color: #ffc107; /* Orange vif façon bandeau ninja */
+  color: #212121;
+  font-weight: bold;
+  text-align: center;
+  font-size: 1.25rem;
+}
+
+.ninja-card .card-img-top {
+  height: 300px;
+  /*Object fit doit*/
+  object-fit: cover;
+}
+
+.ninja-card .btn-success {
+  background-color: #4caf50;
+  border: none;
+  font-weight: bold;
+}
+
+.ninja-card .btn-success:hover {
+  background-color: #388e3c;
+}
+
+.ninja-card .btn-outline-light {
+  border: 2px solid #fff;
+  color: #fff;
+  font-weight: bold;
+}
+
+.ninja-card .btn-outline-light:hover {
+  background-color: #fff;
+  color: #212121;
+}
+
+/* sur cell genre  */
+@media (max-width: 768px) {
+  .formulaire-naruto {
+    padding: 1rem;
+  }
+
+  .headerHP {
+    font-size: 1.25rem;
+  }
+}
+
+/*Details*/
+
+.bingo-card {
+  max-width: 600px;
+  margin: 0 auto;
+  padding: 1.5rem;
+  background-color: #fdf6e3;
+  border: 2px solid #1b1b1b;
+  border-radius: 12px;
+  position: relative;
+  font-family: "Courier New", Courier, monospace;
+}
+
+.bingo-card::after {
+  /*INSANE! mettre un stamp dans le coin 
+  https://emojidb.org/konoha-emojis*/
+  content: "‏𖦹";
+  font-size: 80px;
+  font-weight: bold;
+  color: rgba(0, 0, 0, 0.05);
+  position: absolute;
+  bottom: 10px;
+  right: 15px;
+  pointer-events: none;
+  user-select: none;
+}
+
+.bingo-photo {
+  width: 150px;
+  height: 150px;
+  object-fit: cover;
+  border-radius: 10px;
+  border: 2px solid #000;
+  margin-bottom: 1rem;
+}
+
+.bingo-stats p {
+  margin-bottom: 0.5rem;
+  font-size: 0.95rem;
+}

@@ -1,4 +1,3 @@
-// src/Controleurs/NinjasContext.jsx
 import { createContext, useContext, useState, useEffect } from "react";
 import NinjasService from "../Modeles/NinjasService";
 
