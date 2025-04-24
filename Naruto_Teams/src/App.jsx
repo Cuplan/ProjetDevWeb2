@@ -4,7 +4,7 @@ import HomePage from './Vues/HomePage';
 import NinjasPage from './Vues/NinjasPage';
 import TeamPage from './Vues/TeamPage';
 import NavBar from './Vues/NavBar';
-import NinjaDetailPage from './Vues/NinjaDetailPage';
+import NinjaDetail from './Vues/NinjaDetail';
 
 
 
@@ -16,7 +16,7 @@ function App() {
         <Route path="/" element={<HomePage />} />
         <Route path="/ninjas" element={ <NinjasPage/> } />
         <Route path="/team" element={ <TeamPage/> } />
-        <Route path="/ninja/:id" element={<NinjaDetailPage />} />
+        <Route path="/ninja/:id" element={<NinjaDetail />} />
       </Routes>
     </>
   );
