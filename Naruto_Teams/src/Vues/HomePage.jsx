@@ -1,17 +1,31 @@
 import React from 'react';
-import { useHomePageController } from '../Controleurs/HomePageControleur';
-import '../styles/naruto-theme.css'; 
-
+import { useHomePageContext } from '../Controleurs/HomePageContext';
+import '../styles/naruto-theme.css';
 
 export default function HomePage() {
-    const {
-        formData,
-        handleChange,
-        handleSubmit,
-        resetForm,
-        errors,
-      } = useHomePageController();
-      
+  const {
+    formData,
+    handleChange,
+    handleSubmit,
+    resetForm,
+    errors,
+    isSubmitted // ajoute la déstructuration de isSubmitted
+  } = useHomePageContext();
+
+  // Si le formulaire a été soumis avec succès, afficher un message de remerciement
+  if (isSubmitted) {
+    return (
+      <div className="container my-5 text-center">
+        <div className="p-5 bg-light rounded shadow-sm">
+          <h1 className="text-success">Bienvenu dans le village de {formData.village}</h1>
+          <p>Vous êtes étudiant à l'académie</p>
+          <button type="button" onClick={resetForm} className="btn btn-secondary">
+            Retour
+          </button>
+        </div>
+      </div>
+    );
+  }
 
   return (
     <div className="container my-5">
@@ -49,8 +63,8 @@ export default function HomePage() {
         <div className="mb-3">
           <label className="form-label">Village :</label>
           <select
-            name="message"
-            value={formData.message}
+            name="village"
+            value={formData.village}
             onChange={handleChange}
             className="form-select"
           >
@@ -64,7 +78,7 @@ export default function HomePage() {
             <option value="Aucun">Aucun</option>
             <option value="Autre">Autre</option>
           </select>
-          {errors.message && <div className="text-danger">{errors.message}</div>}
+          {errors.village && <div className="text-danger">{errors.village}</div>}
         </div>
   
         <div className="d-flex justify-content-between mt-4">
@@ -78,6 +92,4 @@ export default function HomePage() {
       </form>
     </div>
   );
-  
 }
-

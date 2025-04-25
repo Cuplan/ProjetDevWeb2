@@ -1,6 +1,6 @@
 import React from "react";
 import { NinjasProvider } from "./NinjasContext";
-import { HomePageProvider } from "./HomePageControleur";
+import { HomePageProvider } from "./HomePageContext";
 import App from "../App";
 
 

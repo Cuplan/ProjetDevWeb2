@@ -1,8 +1,8 @@
 export class HomePageService {
-  constructor({ nom, email, message }) {
+  constructor({ nom, email, village }) {
     this.nom = nom;
     this.email = email;
-    this.message = message;
+    this.village = village;
   }
 
   // https://stackoverflow.com/questions/50330109/simple-regex-pattern-for-email 
@@ -15,7 +15,7 @@ export class HomePageService {
     return (
       this.nom.trim() !== '' &&
       this.isValidEmail() &&
-      this.message.trim() !== ''
+      this.village.trim() !== ''
     );
   }
 
@@ -23,7 +23,7 @@ export class HomePageService {
     const errors = {};
     if (this.nom.trim() === '') errors.nom = "T'as pas de nom? Dattebayo...";
     if (!this.isValidEmail()) errors.email = "Email invalide... Dattebayo!.";
-    if (this.message.trim() === '') errors.message = "Choisi un village, Dattebayo!.";
+    if (this.village.trim() === '') errors.message = "Choisi un village, Dattebayo!.";
     return errors;
   }
 }
