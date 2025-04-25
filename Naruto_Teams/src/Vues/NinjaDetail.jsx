@@ -37,11 +37,11 @@ export default function NinjaDetail() {
 
           <div className="bingo-stats w-100 mt-3">
             <p><strong>Clan :</strong> {ninja?.personal.clan || "Inconnu"}</p>
-            <p><strong>Rang :</strong> { ninja?.rank?.ninjaRank ? Object.values(ninja.rank.ninjaRank) + ", ": "Aucun"}</p>
-            <p><strong>Affiliations :</strong> {ninja?.personal?.affiliation.join(',') || "Inconnu"}</p>
-            <p><strong>Team:</strong> {ninja?.personal ?.team || "Inconnue"}</p>
-            <p><strong>Classement :</strong> {ninja?.personal?.classification.join(',') || "Non classé"}</p>
-            <p><strong>Kekkei Genkai :</strong> {ninja?.personal?.kekkeiGenkai.join(',') || "Aucun"}</p>
+            <p><strong>Rang :</strong> { ninja?.rank?.ninjaRank ? Object.values(ninja.rank.ninjaRank).join(','): "Aucun"}</p>
+            <p><strong>Affiliations :</strong> {ninja?.personal?.affiliation?.join(',') || "Inconnu"}</p>
+            <p><strong>Team:</strong> {ninja?.personal ?.team.join(',') || "Inconnue"}</p>
+            <p><strong>Classement :</strong> {ninja?.personal?.classification?.join(',') || "Non classé"}</p>
+            <p><strong>Kekkei Genkai :</strong> {ninja?.personal?.kekkeiGenkai?.join(',') || "Aucun"}</p>
           </div>
 
           <button

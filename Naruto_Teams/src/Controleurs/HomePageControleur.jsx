@@ -50,8 +50,7 @@ export function HomePageProvider({ children }) {
         handleChange,
         handleSubmit,
         resetForm,
-        errors,
-      }}>
+        errors}}>
       {children}
     </HomePageContext.Provider>
   );

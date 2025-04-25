@@ -4,8 +4,7 @@
   /* orange naruto */
 }
 
-.navbar-naruto .navbar-brand,
-.navbar-naruto .nav-link {
+.navbar-naruto .navbar-brand, .navbar-naruto .nav-link {
   color: white !important;
   font-weight: bold;
   /*à ajouter un font trouvé sur internet*/
@@ -59,16 +58,14 @@ body {
   color: #212121;
 }
 
-.form-control,
-.form-select {
+.form-control, .form-select {
   background-color: #fff3e0;
   border: 1px solid #f57c00;
   color: #212121;
   transition: border-color 0.3s ease;
 }
 
-.form-control:focus,
-.form-select:focus {
+.form-control:focus, .form-select:focus {
   border-color: #c62828;
   box-shadow: 0 0 0 0.2rem rgba(245, 124, 0, 0.3);
 }
