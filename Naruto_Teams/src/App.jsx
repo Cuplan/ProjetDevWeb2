@@ -5,6 +5,7 @@ import NinjasPage from './Vues/NinjasPage';
 import TeamPage from './Vues/TeamPage';
 import NavBar from './Vues/NavBar';
 import NinjaDetail from './Vues/NinjaDetail';
+import { NinjaDetailProvider } from './Controleurs/DetailContext';
 
 
 
@@ -16,7 +17,9 @@ function App() {
         <Route path="/" element={<HomePage />} />
         <Route path="/ninjas" element={ <NinjasPage/> } />
         <Route path="/team" element={ <TeamPage/> } />
-        <Route path="/ninja/:id" element={<NinjaDetail />} />
+        <Route path="/ninja/:id" element={<NinjaDetailProvider><NinjaDetail/></NinjaDetailProvider>
+  }
+/>
       </Routes>
     </>
   );

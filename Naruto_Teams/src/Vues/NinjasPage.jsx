@@ -5,7 +5,7 @@ import { useNinjas } from '../Controleurs/NinjasContext';
 
 export default function NinjasPage() {
   const ninjas = useNinjas();
-
+{/*Ajouter un image pour les erreurs OnError? ... */}
   return (
     <div className="container my-5">
       <h1 className="text-center mb-4 text-light">Liste des Ninjas</h1>
@@ -20,7 +20,8 @@ export default function NinjasPage() {
             <img
               className="card-img-top"
               src={ninja.images[0]}
-              alt={ninja.name}/>
+              alt={ninja.name}
+              />
             <div className="card-body">
               <div className="d-flex justify-content-between">
                 <button
