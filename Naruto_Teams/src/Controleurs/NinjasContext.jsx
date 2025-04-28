@@ -1,9 +1,9 @@
 import React, { createContext, useContext, useState, useEffect } from "react";
 import NinjasService from "../Modeles/NinjasService";
 
-// On crée un contexte React pour partager la liste de ninjas et la fonction de filtre
+
 export const NinjasContext = createContext({
-  ninjas: [],          // liste des ninjas à afficher (éventuellement filtrée)
+  ninjas: [],          // liste des ninjas à afficher filtrés
   filterNinjas: () => {} // fonction pour filtrer la liste
 });
 
@@ -28,12 +28,12 @@ export function NinjasProvider({ children }) {
         setNinjas(lesNinjas);    // on initialise la liste affichée
       })
       .catch(err => console.error(err)); // gestion basique des erreurs
-  }, []); // [] -> ne s'exécute qu'une fois
+  }, []); // [] =  ne s'exécute qu'une fois
 
  
   function filterNinjas(term) {
     const lower = term.toLowerCase().trim();
-    // On met à jour la liste affichée en ne gardant que les correspondances
+    // On met à jour la liste affichée dynamiquement
     setNinjas(
       allNinjas.filter(ninja =>
         ninja.name.toLowerCase().includes(lower)
@@ -42,7 +42,7 @@ export function NinjasProvider({ children }) {
   }
 
   return (
-    // On fournit aux enfants : la liste filtrée + la fonction de filtre
+    // eat my children
     <NinjasContext.Provider value={{ ninjas, filterNinjas }}>
       {children}
     </NinjasContext.Provider>

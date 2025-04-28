@@ -3,7 +3,7 @@ import { useParams } from 'react-router-dom';
 import NinjasService from '../Modeles/NinjasService';
 
 // Création du contexte pour partager les data d'UN ninja (1 seul, UNO) 
-const NinjaDetailContext = createContext(null);
+const NinjaDetailContext = createContext({});
 
 // Hook ! Garre à toi Peter Pan 
 export function useNinjaDetail() {
