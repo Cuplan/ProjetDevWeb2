@@ -23,7 +23,7 @@ export default function TeamPage() {
         </Link>
       </div>
 
-      <h2 className="mb-4 text-center">Ma Team</h2>
+      <h2 className=" team-page mb-4 text-center">Ma Team</h2>
       <div className="row">
         {team.map(ninja => (
           <div key={ninja.id} className="col-sm-6 col-md-4 col-lg-3 mb-4">

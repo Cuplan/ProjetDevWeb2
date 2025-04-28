@@ -205,3 +205,102 @@ body {
 }
 
 /*  TeamPage */
+.team-page {
+  position: relative;
+  background-color: #1c1c1c; /* fond sombre neutre */
+  padding: 2rem;
+  border-radius: 1rem;
+  overflow: hidden;
+  font-family: 'NarutoFont', sans-serif;
+  color: #f8f9fa;
+}
+
+/* Titres accentués en orange doux */
+.team-page h2, .team-page h3 {
+  margin-bottom: 1.5rem;
+  color: #FFB300;
+  text-shadow: 1px 1px 2px rgba(0,0,0,0.6);
+}
+
+.team-page .row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  justify-content: center;
+}
+
+/* Cartes ninja en nuances sombres avec bord orange subtil */
+.team-page .card {
+  position: relative;
+  width: 260px;
+  background: #ffc107;
+  border: 2px solid #FFB300;
+  border-radius: 0.75rem;
+  overflow: hidden;
+  box-shadow: 0 0 10px rgba(0,0,0,0.5);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.team-page .card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 0 15px rgba(255,179,0,0.5);
+}
+
+.team-page .card-img-top {
+  width: 100%;
+  height: 180px;
+  object-fit: cover;
+  border-bottom: 2px solid #FFB300;
+}
+
+.team-page .card-body {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 1rem;
+}
+
+/* Boutons avec accents sombres et touches d'orange */
+.team-page .btn-danger {
+  width: 100%;
+  background-color: #D32F2F;
+  border: 2px solid #B71C1C;
+  color: #fff;
+  font-weight: bold;
+  transition: background-color 0.3s ease;
+}
+
+.team-page .btn-danger:hover {
+  background-color: #B71C1C;
+}
+
+.team-page .btn-warning {
+  display: inline-block;
+  padding: 0.5rem 2rem;
+  font-size: 1.1rem;
+  background-color: transparent;
+  border: 2px solid #FFB300;
+  color: #FFB300;
+  font-weight: bold;
+  margin-top: 1rem;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.team-page .btn-warning:hover {
+  background-color: #FFB300;
+  color: #1c1c1c;
+}
+
+/* Ajustements responsive */
+@media (max-width: 576px) {
+  .team-page {
+    padding: 1rem;
+  }
+  .team-page .card {
+    width: 100%;
+  }
+  .team-page .card-img-top {
+    height: 140px;
+  }
+}
+
