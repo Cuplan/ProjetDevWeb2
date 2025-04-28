@@ -2,8 +2,10 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import { useNinjas } from '../Controleurs/NinjasContext';
 import { useTeam } from '../Controleurs/TeamContext';
+
 export default function NinjasPage() {
   const { ninjas, filterNinjas } = useNinjas();
+  const { ajouterTeam } = useTeam();
 
   return (
     <div className="container my-5">

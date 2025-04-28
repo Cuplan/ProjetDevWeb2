@@ -1,13 +1,16 @@
+
+// Gestion de la sauvegarde des teams! 
+
 export default class TeamService {
     // Récupère la team depuis localStorage
     static getTeam() {
-      const data = localStorage.getItem('equipe');
+      const data = localStorage.getItem('team');
       return data ? JSON.parse(data) : [];
     }
   
     // Enregistre la team dans localStorage
     static enregistrerTeam(membres) {
-      localStorage.setItem('equipe', JSON.stringify(membres));
+      localStorage.setItem('team', JSON.stringify(membres));
     }
   
     // Ajoute un ninja à la team (évite les doublons)
@@ -33,5 +36,6 @@ export default class TeamService {
       this.enregistrerTeam([]);
       return [];
     }
+
   }
   

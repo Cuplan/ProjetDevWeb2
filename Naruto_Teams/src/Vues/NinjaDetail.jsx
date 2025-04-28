@@ -5,7 +5,7 @@ import { useTeam } from "../Controleurs/TeamContext";
 
 export default function NinjaDetail() {
   const { ninja } = useNinjaDetail();
-  const { ajouterTeam } = useEquipe(); // hook pour ajouter
+  const { ajouterTeam } = useTeam(); // hook pour ajouter
 
 
   if (!ninja)

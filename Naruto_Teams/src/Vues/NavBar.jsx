@@ -1,11 +1,12 @@
 import {Link} from 'react-router-dom'
 import '../styles/naruto-theme.css'; 
-
-// PANIER : https://buzut.net/realiser-un-panier-en-javascript/ 
+import { useTeam } from '../Controleurs/TeamContext';
 
 // NavBar comme dans l'exemple du projet sur MVC react 
 // ICI VENIR FIX LES BOUTONS ! 
 export default function NavBar() {
+  
+  const {team} = useTeam(); 
 
     return (
         <nav className="navbar navbar-expand-lg navbar-naruto">
@@ -29,7 +30,9 @@ export default function NavBar() {
                   <Link className="nav-link" to="/ninjas">Liste des ninjas</Link>
                 </li>
                 <li className="nav-item">
-                  <Link className="nav-link" to="/team">Votre team !</Link>
+                  <Link className="nav-link" to="/team">Votre team !
+                  <span className='badge bg-warning ms-1'>{team.length}</span>
+                  </Link>
                 </li>
               </ul>
             </div>

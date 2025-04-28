@@ -1,4 +1,4 @@
-import { createContext, useContext, useState, useEffect } from "react";
+import React, { createContext, useContext, useState, useEffect } from "react";
 import NinjasService from "../Modeles/NinjasService";
 
 // On crée un contexte React pour partager la liste de ninjas et la fonction de filtre
