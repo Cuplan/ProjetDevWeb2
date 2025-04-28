@@ -1,9 +1,17 @@
-import
+export default class PanierService{
 
-export default class PanierService {
-
-    ajouterAuPanier = (id) => {
+    constructor({ id }) {
+       this.id = id;
+      }
     
-  };
+    // ICI ON VA RÉGLER TOUT CE QUI EST AJOUTER AU PANIER , SUPPRIMER ETC 
+
+    ajouterPanier(){
+        
+        console.log("Test?" + id);
+        
+
+    }
+    
 
 }

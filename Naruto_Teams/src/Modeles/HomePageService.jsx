@@ -13,8 +13,8 @@ export class HomePageService {
 
   isValid() {
     return (
-      this.nom.trim() !== '' &&
-      this.isValidEmail() &&
+      this.nom.trim() !== '' ||
+      this.isValidEmail() ||
       this.village.trim() !== ''
     );
   }
@@ -23,7 +23,7 @@ export class HomePageService {
     const errors = {};
     if (this.nom.trim() === '') errors.nom = "T'as pas de nom? Dattebayo...";
     if (!this.isValidEmail()) errors.email = "Email invalide... Dattebayo!.";
-    if (this.village.trim() === '') errors.message = "Choisi un village, Dattebayo!.";
+    if (this.village.trim() === '') errors.village = "Choisi un village, Dattebayo!.";
     return errors;
   }
 }

@@ -6,7 +6,13 @@ const HomePageContext = createContext();
 
 export function HomePageProvider({ children }) {
   // État pour les champs du formulaire
-  const [formData, setFormData] = useState({ nom: '', email: '', village: '' });
+  const [formData, setFormData] = useState(
+    {
+      nom: '',
+      email: '',
+      village: ''
+    }
+  );
   // État pour les erreurs de validation
   const [errors, setErrors] = useState({});
   // État pour indiquer que le formulaire a été soumis avec succès
@@ -15,13 +21,25 @@ export function HomePageProvider({ children }) {
   // Handler pour mettre à jour formData à chaque changement de champ
   const handleChange = (e) => {
     const { name, value } = e.target;
-    setFormData(prev => ({ ...prev, [name]: value }));
+    setFormData(prev => (
+      {
+        ...prev,
+        [name]: value
+      }
+    )
+    );
   };
 
   // Réinitialise le formulaire, les erreurs et l'état de soumission
   const resetForm = () => {
     setIsSubmitted(false);    // revient à l'état initial (affiche le formulaire)
-    setFormData({ nom: '', email: '', village: '' });
+    setFormData(
+      {
+        nom: '',
+        email: '',
+        village: ''
+      }
+    );
     setErrors({});
   };
 

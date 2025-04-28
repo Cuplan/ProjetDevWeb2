@@ -1,6 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import { useNinjas } from '../Controleurs/NinjasContext';
+import { usePanierList } from '../Controleurs/PanierContext';
 
 export default function NinjasPage() {
   const { ninjas, filterNinjas } = useNinjas();
@@ -32,12 +33,13 @@ export default function NinjasPage() {
                 className="card-img-top"
                 src={ninja.images[0]}
                 alt={ninja.name}
+               // Ajouter Fallbackimage 
                 onError={e => { e.currentTarget.onerror = null; e.currentTarget.src = fallbackImage; }}/>
               <div className="card-body">
                 <div className="d-flex justify-content-between">
                   <button
                     className="btn btn-success"
-                    onClick={() => console.log(`Ajout à la team: ${ninja.id}`)}>
+                    onClick={() => console.log(`Ajout à la team: ${ninja.id}`) }>
                     Ajouter à la Team
                   </button>
                   <Link to={`/ninja/${ninja.id}`} className="btn btn-outline-light">

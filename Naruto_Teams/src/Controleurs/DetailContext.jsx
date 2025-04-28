@@ -40,7 +40,7 @@ export function NinjaDetailProvider({ children }) {
 
   return (
     // Le provider met à disposition le ninja et une fonction pour re-fetch
-    <NinjaDetailContext.Provider value={{ ninja, refetchNinja: fetchNinja }}>
+    <NinjaDetailContext.Provider value={{ ninja, fetchNinja }}>
       {children}
     </NinjaDetailContext.Provider>
   );

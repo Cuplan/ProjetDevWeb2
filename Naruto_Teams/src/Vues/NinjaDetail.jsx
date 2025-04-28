@@ -1,6 +1,7 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import { useNinjaDetail } from "../Controleurs/DetailContext";
+import ajouterAuPanier from "../Modeles/PanierService"
 
 export default function NinjaDetail() {
   const { ninja } = useNinjaDetail();
@@ -42,7 +43,10 @@ export default function NinjaDetail() {
 
           <button
             className="btn btn-danger mt-3"
-            onClick={() => ajouterAuPanier(ninja?.id)}>
+            onClick={() => 
+              new ajouterAuPanier(ninja?.id)
+              
+            }>
             Ajouter à la team
           </button>
         </div>

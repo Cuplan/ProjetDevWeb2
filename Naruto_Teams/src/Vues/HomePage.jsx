@@ -17,7 +17,7 @@ export default function HomePage() {
     return (
       <div className="container my-5 text-center">
         <div className="p-5 bg-light rounded shadow-sm">
-          <h1 className="text-success">Bienvenu dans le village de {formData.village}</h1>
+          <h1 className="text-success">Bienvenu dans le village de {formData.village}, {formData.nom}</h1>
           <p>Vous êtes étudiant à l'académie</p>
           <button type="button" onClick={resetForm} className="btn btn-secondary">
             Retour
@@ -66,8 +66,7 @@ export default function HomePage() {
             name="village"
             value={formData.village}
             onChange={handleChange}
-            className="form-select"
-          >
+            className="form-select">
             <option value="">-- Choisir son village --</option>
             <option value="Konoha">Konoha</option>
             <option value="Kiri">Kiri</option>
