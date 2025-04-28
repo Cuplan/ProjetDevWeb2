@@ -13,10 +13,6 @@ export default function NinjaDetail() {
     console.log('Ce Ninja est un uchiha')
   }
 
-  const ajouterAuPanier = (id) => {
-    console.log("Ajout à la team:", id);
-    // Ajout logique plus tard
-  };
 
   return (
     <div className="container my-5">

@@ -17,9 +17,7 @@ function App() {
         <Route path="/" element={<HomePage />} />
         <Route path="/ninjas" element={ <NinjasPage/> } />
         <Route path="/team" element={ <TeamPage/> } />
-        <Route path="/ninja/:id" element={<NinjaDetailProvider><NinjaDetail/></NinjaDetailProvider>
-  }
-/>
+        <Route path="/ninja/:id" element={<NinjaDetailProvider><NinjaDetail/></NinjaDetailProvider>}/>
       </Routes>
     </>
   );
