@@ -1,10 +1,12 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import { useNinjaDetail } from "../Controleurs/DetailContext";
-import ajouterAuPanier from "../Modeles/PanierService"
+import { useTeam } from "../Controleurs/TeamContext";
 
 export default function NinjaDetail() {
   const { ninja } = useNinjaDetail();
+  const { ajouterTeam } = useEquipe(); // hook pour ajouter
+
 
   if (!ninja)
     return <div className="container my-5 text-center">Ninja introuvable...</div>;
@@ -44,8 +46,7 @@ export default function NinjaDetail() {
           <button
             className="btn btn-danger mt-3"
             onClick={() => 
-              new ajouterAuPanier(ninja?.id)
-              
+              ajouterTeam(ninja)
             }>
             Ajouter à la team
           </button>

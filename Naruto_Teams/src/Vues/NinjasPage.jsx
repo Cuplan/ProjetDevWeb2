@@ -1,8 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import { useNinjas } from '../Controleurs/NinjasContext';
-import { usePanierList } from '../Controleurs/PanierContext';
-
+import { useTeam } from '../Controleurs/TeamContext';
 export default function NinjasPage() {
   const { ninjas, filterNinjas } = useNinjas();
 
@@ -39,7 +38,7 @@ export default function NinjasPage() {
                 <div className="d-flex justify-content-between">
                   <button
                     className="btn btn-success"
-                    onClick={() => console.log(`Ajout à la team: ${ninja.id}`) }>
+                    onClick={() => ajouterTeam(ninja) }>
                     Ajouter à la Team
                   </button>
                   <Link to={`/ninja/${ninja.id}`} className="btn btn-outline-light">
