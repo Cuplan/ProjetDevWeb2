@@ -27,12 +27,13 @@ export function NinjasProvider({ children }) {
         setAllNinjas(lesNinjas); // on stocke la totalité
         setNinjas(lesNinjas);    // on initialise la liste affichée
       })
-      .catch(err => console.error(err)); // gestion basique des erreurs
-  }, []); // [] =  ne s'exécute qu'une fois
+      .catch(err => console.error(err)); // gestion  des erreurs
+  }, []); 
 
  
-  function filterNinjas(term) {
-    const lower = term.toLowerCase().trim();
+  // fonction pour filtrer 
+  function filterNinjas(recherche) {
+    const lower = recherche.toLowerCase().trim();
     // On met à jour la liste affichée dynamiquement
     setNinjas(
       allNinjas.filter(ninja =>
@@ -41,8 +42,8 @@ export function NinjasProvider({ children }) {
     );
   }
 
-  return (
-    // eat my children
+ // eat my children, I provide! 
+  return ( 
     <NinjasContext.Provider value={{ ninjas, filterNinjas }}>
       {children}
     </NinjasContext.Provider>

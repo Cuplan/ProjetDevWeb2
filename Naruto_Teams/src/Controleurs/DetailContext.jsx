@@ -16,14 +16,14 @@ export function NinjaDetailProvider({ children }) {
   const { id } = useParams();
 
   // Stocker le ninja récupéré
-  const [ninja, setNinja] = useState(null);
+  const [ninja, setNinja] = useState(null); // Null au début, car il y a pas de ninja avant qu'il y en ait un :p 
 
   // Fonction async pour appeler l'API et charger les détails du ninja
   const fetchNinja = async () => {
-    const service = new NinjasService();
+    const modele = new NinjasService();
     try {
       // Récupère le ninja par son ID
-      const leNinja = await service.getNinjaById(id);
+      const leNinja = await modele.getNinjaById(id);
       // Met à jour l'état avec les données reçues
       setNinja(leNinja);
     } catch (err) {
@@ -38,8 +38,8 @@ export function NinjaDetailProvider({ children }) {
     fetchNinja();
   }, [id]);
 
+  // Le provider 
   return (
-    // Le provider met à disposition le ninja et une fonction pour re-fetch
     <NinjaDetailContext.Provider value={{ ninja, fetchNinja }}>
       {children}
     </NinjaDetailContext.Provider>

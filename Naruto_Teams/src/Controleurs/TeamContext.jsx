@@ -5,12 +5,12 @@ import TeamService from '../Modeles/TeamService';
 // Cela permet à n'importe quel composant enfant d'accéder à la team et aux méthodes associées
 const TeamContext = createContext({
   team: [],
-  addToTeam: () => {},
-  removeFromTeam: () => {},
-  clearTeam: () => {}
+  ajouterTeam: () => {}, // Mettre des fonctions vides comme ça permet d'éviter des erreurs ! 
+  oterTeam: () => {},
+  resetTeam: () => {}
 });
 
-// Hook personnalisé pour accéder facilement au contexte depuis n'importe quel composant
+// Hook ! 
 export function useTeam() {
   return useContext(TeamContext); 
 }
@@ -25,25 +25,26 @@ export function TeamProvider({ children }) {
     setTeam(saved);
   }, []);
 
-  // Update a chaque ajout 
+  // Update la save quand on ajoute un NINJA
   function ajouterTeam(ninja) {
     const updated = TeamService.ajouterMembre(ninja);
     setTeam(updated);
   }
 
-  // pareil mais pour les retrait 
+  // Update la save quand on enlève un NINJA
   function oterTeam(id) {
     const updated = TeamService.retirerMembre(id);
     setTeam(updated);
   }
 
-  //pareil pour le reset 
+  // Update la save quand on RESET TOUT! 
   function resetTeam() {
     const updated = TeamService.viderTeam();
     setTeam(updated);
   }
 
 
+  // Le provider 
   return (
     <TeamContext.Provider value={{ team, ajouterTeam, oterTeam, resetTeam }}>
       {children}
