@@ -3,7 +3,7 @@ import { useHomePageContext } from '../Controleurs/HomePageContext';
 import '../styles/naruto-theme.css';
 
 export default function HomePage() {
-  const {
+  const { // forme par défaut 
     formData,
     handleChange,
     handleSubmit,
@@ -12,7 +12,7 @@ export default function HomePage() {
     isSubmitted // ajoute la déstructuration de isSubmitted
   } = useHomePageContext();
 
-  // Si le formulaire a été soumis avec succès, afficher un message de remerciement
+  // Si le formulaire a été soumis avec succès, afficher un message de remerciement dynamique
   if (isSubmitted) {
     return (
       <div className="container my-5 text-center">

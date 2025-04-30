@@ -17,12 +17,12 @@ export default function NinjasPage() {
           type="text"
           className="form-control w-50"
           placeholder="Rechercher un ninja…"
-          onChange={e => filterNinjas(e.target.value)}
+          onChange={e => filterNinjas(e.target.value)} // Le filter 
         />
       </div>
 
       <div className="row justify-content-center">
-        {ninjas.length > 0 ? (
+        {ninjas.length > 0 ? ( // Le ptit ? car on veut savoir si y'a des ninjas ! 
           ninjas.map(ninja => (
             <div
               key={ninja.id}
@@ -34,8 +34,9 @@ export default function NinjasPage() {
                 className="card-img-top"
                 src={ninja.images[0]}
                 alt={ninja.name}
-               // Ajouter Fallbackimage 
-                onError={e => { e.currentTarget.onerror = null; e.currentTarget.src = fallbackImage; }}/>
+               // Ajouter Fallbackimage quand je l'aurai 
+                onError={e => { e.currentTarget.onerror = null;
+                 e.currentTarget.src = fallbackImage; }}/>
               <div className="card-body">
                 <div className="d-flex justify-content-between">
                   <button
@@ -51,7 +52,7 @@ export default function NinjasPage() {
             </div>
           ))
         ) : (
-          <p className="text-center">Aucun ninja trouvé</p>
+          <p className="text-center">Aucun ninja trouvé</p> // Le cas où y'a aucun ninja de trouvé 
         )}
       </div>
     </div>

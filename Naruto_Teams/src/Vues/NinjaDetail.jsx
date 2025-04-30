@@ -34,7 +34,7 @@ export default function NinjaDetail() {
           />
           <h4 className="text-center fw-bold">{ninja?.name || "Nom inconnu"}</h4>
 
-          <div className="bingo-stats w-100 mt-3">
+          <div className="bingo-stats w-100 mt-3"> {/* J'ai du mettre plein de ? pour valider x_x  */}
             <p><strong>Clan :</strong> {ninja?.personal.clan + " " || "Inconnu"}</p>
             <p><strong>Rang :</strong> { ninja?.rank?.ninjaRank ? Object.values(ninja.rank.ninjaRank) + " ": "Aucun"}</p>
             <p><strong>Affiliations :</strong> {ninja?.personal?.affiliation + " " || "Inconnu"}</p>
@@ -46,7 +46,7 @@ export default function NinjaDetail() {
           <button
             className="btn btn-danger mt-3"
             onClick={() => 
-              ajouterTeam(ninja)
+              ajouterTeam(ninja) 
             }>
             Ajouter à la team
           </button>
