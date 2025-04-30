@@ -11,6 +11,7 @@ export class HomePageService {
     return regex.test(this.email);
   }
 
+  // Validation qui check si le form est remplie 
   isValid() {
     return (
       this.nom.trim() !== '' ||
@@ -19,11 +20,15 @@ export class HomePageService {
     );
   }
 
+  // Gère les erreurs :p dattebayo 
   getErrors() {
-    const errors = {};
-    if (this.nom.trim() === '') errors.nom = "T'as pas de nom? Dattebayo...";
-    if (!this.isValidEmail()) errors.email = "Email invalide... Dattebayo!.";
-    if (this.village.trim() === '') errors.village = "Choisi un village, Dattebayo!.";
+    const errors = {}; // sous forme d'objet 
+    if (this.nom.trim() === '')
+       errors.nom = "T'as pas de nom? Dattebayo...";
+    if (!this.isValidEmail())
+       errors.email = "Email invalide... Dattebayo!.";
+    if (this.village.trim() === '')
+       errors.village = "Choisi un village, Dattebayo!.";
     return errors;
   }
 }

@@ -1,3 +1,14 @@
+/*Sources: https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_transitions/Using_CSS_transitions 
+https://web.dev/learn/css/transitions
+https://www.w3schools.com/cssref/css_units.php
+https://developer.mozilla.org/en-US/docs/Web/CSS/transform
+
+Beaucoup de fun ! :P 
+
+peut être implémenter des éléments d'ici: https://blog.hubspot.com/website/css-animation-examples 
+*/
+
+
 /* Navbar! */
 .navbar-naruto {
   background-color: #f57c00 !important;
@@ -107,7 +118,6 @@ body {
   border-radius: 12px;
   overflow: hidden;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
-  /*NEW CSS DROP NEW CSS DROP! */
   transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
@@ -127,7 +137,6 @@ body {
 
 .ninja-card .card-img-top {
   height: 300px;
-  /*Object fit doit*/
   object-fit: cover;
 }
 
