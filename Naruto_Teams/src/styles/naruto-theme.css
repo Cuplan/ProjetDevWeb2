@@ -30,7 +30,6 @@ html,body, #root {
 
 .navbar-naruto .navbar-brand, .navbar-naruto .nav-link {
   color: white !important;
-  font-weight: bold;
   /*à ajouter un font trouvé sur internet*/
   font-family: "Naruto","Arial Black", sans-serif;
   /*Ajoute du contraste*/
@@ -211,13 +210,10 @@ body {
   https://emojidb.org/konoha-emojis*/
   content: "‏𖦹";
   font-size: 80px;
-  font-weight: bold;
   color: rgba(0, 0, 0, 0.05);
   position: absolute;
   bottom: 10px;
   right: 15px;
-  pointer-events: none;
-  user-select: none;
 }
 
 .bingo-photo {
