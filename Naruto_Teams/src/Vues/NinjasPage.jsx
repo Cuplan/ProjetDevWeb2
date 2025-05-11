@@ -8,8 +8,8 @@ export default function NinjasPage() {
   const { ajouterTeam } = useTeam();
 
   return (
-    <div className="container my-5">
-      <h1 className="text-center mb-4 text-light">Liste des Ninjas</h1>
+    <div className="ninja-page container my-5">
+      <h1 className="ninja-page text-center mb-4 text-light">Liste des Ninjas</h1>
       
       {/* Barre de recherche */}
       <div className="mb-4 d-flex justify-content-center">
@@ -51,9 +51,8 @@ export default function NinjasPage() {
               </div>
             </div>
           ))
-        ) : (
-          <p className="text-center">Aucun ninja trouvé</p> // Le cas où y'a aucun ninja de trouvé 
-        )}
+        ) : ( <p className="aucun-t text-center">Aucun ninja trouvé</p> // Le cas où y'a aucun ninja de trouvé 
+    )}
       </div>
     </div>
   );

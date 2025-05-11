@@ -11,12 +11,6 @@ export default function NinjaDetail() {
   if (!ninja)
     return <div className="container my-5 text-center">Ninja introuvable...</div>;
 
-{/*AJouter le son du sharingan si c'est un uchiha!!! etc */}
-  if(ninja?.personal.clan === 'Uchiha'){
-    console.log('Ce Ninja est un uchiha')
-  }
-
-
   return (
     <div className="container my-5">
       <div className="d-flex justify-content-between align-items-center mb-4">

@@ -7,7 +7,20 @@ Beaucoup de fun ! :P
 
 peut être implémenter des éléments d'ici: https://blog.hubspot.com/website/css-animation-examples 
 */
+/* Fonts et curseurs! */ 
 
+@font-face {
+  font-family: Naruto;
+  src: url(./fonts/njnaruto.ttf);
+}
+
+html,body, #root {
+  cursor: url(./cursor/defKunai.cur), auto;
+}
+
+.nav-link:hover, button:hover {
+  cursor: url(./cursor/onBut.cur), pointer ;
+}
 
 /* Navbar! */
 .navbar-naruto {
@@ -19,7 +32,7 @@ peut être implémenter des éléments d'ici: https://blog.hubspot.com/website/c
   color: white !important;
   font-weight: bold;
   /*à ajouter un font trouvé sur internet*/
-  font-family: "Arial Black", sans-serif;
+  font-family: "Naruto","Arial Black", sans-serif;
   /*Ajoute du contraste*/
   text-shadow: 1px 1px 2px #000;
 }
@@ -115,6 +128,7 @@ body {
 .ninja-card {
   background-color: #1c1c1c;
   color: #fff;
+  margin: 0;
   border-radius: 12px;
   overflow: hidden;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
@@ -161,6 +175,10 @@ body {
   color: #212121;
 }
 
+.aucun-t { /*Plus lisible*/
+  color: white;
+}
+
 /* sur cell genre  */
 @media (max-width: 768px) {
   .formulaire-naruto {
@@ -174,15 +192,18 @@ body {
 
 /*Details*/
 
+.ninja-page h1 { /*Pas la font des cards */
+  font-family: 'Naruto', Courier, monospace;
+}
+
 .bingo-card {
   max-width: 600px;
-  margin: 0 auto;
-  padding: 1.5rem;
   background-color: #fdf6e3;
   border: 2px solid #1b1b1b;
-  border-radius: 12px;
+  margin: auto;
+  padding: 1.5rem;
+  border-radius: 13px;
   position: relative;
-  font-family: "Courier New", Courier, monospace;
 }
 
 .bingo-card::after {
@@ -220,7 +241,7 @@ body {
   padding: 2rem;
   border-radius: 1rem;
   overflow: hidden;
-  font-family: 'NarutoFont', sans-serif;
+  font-family: 'Naruto', sans-serif;
   color: #f8f9fa;
 }
 

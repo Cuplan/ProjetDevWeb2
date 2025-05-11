@@ -29,8 +29,14 @@ export default function HomePage() {
 
   return (
     <div className="container my-5">
-      <div className="text-center mb-4 p-4 bg-light rounded shadow-sm headerHP">
-        <h1>J'attends d'avoir un truc based à mettre ici</h1>
+      <div className="text-center  rounded shadow-sm headerHP">
+        {/*Pris directement sur l'option integrate de youtube  */}
+       <iframe width="560" height="315" src="https://www.youtube.com/embed/ylnrKJFWDAg?si=n6Wup-cW2UvSSA_c" 
+       title="YouTube video player" 
+       frameborder="0" 
+       allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+        referrerpolicy="strict-origin-when-cross-origin" 
+        allowfullscreen></iframe>
       </div>
   
       <form onSubmit={handleSubmit} className="p-4 border rounded shadow-sm bg-white">

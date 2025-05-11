@@ -2,6 +2,7 @@ import React from 'react';
 import { useTeam } from '../Controleurs/TeamContext';
 import { Link } from 'react-router-dom';
 import '../styles/naruto-theme.css';  
+import { useNinjas } from '../Controleurs/NinjasContext';
 
 export default function TeamPage() {
   const { team, oterTeam, resetTeam } = useTeam();
